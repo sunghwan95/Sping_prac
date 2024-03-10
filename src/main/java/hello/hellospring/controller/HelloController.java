@@ -24,18 +24,17 @@ public class HelloController {
     @ResponseBody
     public Hello helloApi(@RequestParam("name") String name){
         Hello hello = new Hello();
-        hello.setValue(name);
+        hello.setName(name);
         return hello;
     }
-
     static class Hello{
         private String name;
 
-        public String getKKKKey(){
+        public String getName(){
             return name;
         }
 
-        public void setValue(String name){
+        public void setName(String name){
             this.name=name;
         }
     }
